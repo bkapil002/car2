@@ -240,7 +240,7 @@ function App() {
 
               <p className="text-lg leading-relaxed">
                 Are you driving today and have a free seat to offer in your car or you’re traveling
-                and need a lift to your destination? Let’s GetRider.F
+                and need a lift to your destination? Let’s GetRider.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mt-4">

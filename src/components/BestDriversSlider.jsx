@@ -10,7 +10,7 @@ import person1 from '../../image/customer (1).jpg'
 import person2 from '../../image/customer (2).jpg'
 import person3 from '../../image/customer (3).jpg'
 
-// Driver Data
+
 const drivers = [
   {
     name: "Mason Brooks",
@@ -53,7 +53,7 @@ const drivers = [
   },
 ];
 
-// Custom Arrows
+
 const PrevArrow = ({ onClick }) => (
   <div
     onClick={onClick}
@@ -72,7 +72,7 @@ const NextArrow = ({ onClick }) => (
   </div>
 );
 
-// Component
+
 const BestDriversSlider = () => {
 
   
