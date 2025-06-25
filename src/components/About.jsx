@@ -9,7 +9,7 @@ const About = () => {
       <div className="border-b-4 ml-12 border-white rounded-2xl w-40 mb-10 relative">
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10 -mt-8 items-center">
+      <div className="grid md:grid-cols-2 gap-30 -mt-8 items-center">
         
         <div className="space-y-8">
         
@@ -54,12 +54,12 @@ const About = () => {
           <img   loading='lazy'
             src={car2} 
             alt="Car Front"
-            className="w-1/3 h-90 object-cover   rounded-[20px]"
+            className="w-50 h-90 object-cover   rounded-[20px]"
           />
           <img   loading='lazy'
             src={car1}
             alt="Car Back"
-            className="w-1/3 h-90 object-cover  rounded-[20px]"
+            className="w-50 h-90 object-cover  rounded-[20px]"
           />
         </div>
       </div>
