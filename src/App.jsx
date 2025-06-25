@@ -8,8 +8,8 @@ import car from '../image/electric-car.png'
 import blog from '../image/blog.png'
 import hearder from '../image/header.jpg'
 import qr from '../image/qr.png'
-import play from '../image/paystore.png'
-import appstore from '../image/app-store.png'
+import play from '../image/play-removebg-preview.png'
+import appstore from '../image/apple-removebg-preview.png'
 import logo from '../image/logo.png'
 
 import logo1 from '../image/logo1.png'
@@ -156,8 +156,8 @@ function App() {
          <img loading='lazy' src={qr} alt="QR Code" className="h-20 rounded-sm" />
             </div>
             <div className="space-y-2">
-            <img loading='lazy' src={appstore} alt="App Store" className="h-10" />
-             <img loading='lazy' src={play} alt="Google Play" className="h-10" />
+            <img loading='lazy' src={appstore} alt="App Store" className="h-10 rounded-lg" />
+             <img loading='lazy' src={play} alt="Google Play" className="h-10 rounded-lg" />
             </div>
           </div>
         </div>
@@ -186,12 +186,6 @@ function App() {
           </div>
         </div>
       </section>
-
-
-
-
-
-
       <div className="bg-[#062851] text-white py-20 px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold tracking-wide">How It Works</h2>
         <div className="w-24 h-1 bg-white rounded-xl mt-2 mx-auto mb-10"></div>
@@ -221,6 +215,7 @@ function App() {
               Share your journey, save more, and make every ride more meaningful.
             </p>
           </div>
+
         </div>
       </div>
 
@@ -249,8 +244,8 @@ function App() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mt-4">
-                <img loading="lazy" src={play} alt="Google Play" className="h-10" />
-                <img loading="lazy" src={appstore} alt="App Store" className="h-10" />
+                <img loading="lazy" src={play} alt="Google Play" className="h-10 rounded-lg" />
+                <img loading="lazy" src={appstore} alt="App Store" className="h-10 rounded-lg" />
               <img loading="lazy" src={qr} alt="QR Code" className="w-20 rounded-2xl" />
               </div>
             </div>
