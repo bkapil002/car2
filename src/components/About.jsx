@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaRoad, FaCar, FaGlobe } from "react-icons/fa";
-import car1 from "../../image/drive (3).jpg"
+import car1 from "../../image/frontend.jpg"
+import car2 from "../../image/bak.jpg"
 const About = () => {
   return (
     <section className="bg-[#0a2b4a] text-white py-12 px-6 md:px-16">
@@ -8,7 +9,7 @@ const About = () => {
       <div className="border-b-4 ml-12 border-white rounded-2xl w-40 mb-10 relative">
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10 -mt-5 items-center">
+      <div className="grid md:grid-cols-2 gap-10 -mt-8 items-center">
         
         <div className="space-y-8">
         
@@ -49,16 +50,16 @@ const About = () => {
         </div>
 
         
-         <div className="hidden md:flex gap-4 justify-center w-full">
+         <div className="hidden md:flex gap-2 justify-center w-full">
           <img   loading='lazy'
-            src={car1} 
+            src={car2} 
             alt="Car Front"
-            className="w-1/3 h-80 object-cover object-left rounded-[20px]"
+            className="w-1/3 h-90 object-cover   rounded-[20px]"
           />
           <img   loading='lazy'
             src={car1}
             alt="Car Back"
-            className="w-2/3 h-80 object-cover object-right rounded-[20px]"
+            className="w-1/3 h-90 object-cover  rounded-[20px]"
           />
         </div>
       </div>

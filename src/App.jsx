@@ -156,8 +156,8 @@ function App() {
          <img loading='lazy' src={qr} alt="QR Code" className="h-20 rounded-sm" />
             </div>
             <div className="space-y-2">
-            <img loading='lazy' src={appstore} alt="App Store" className="h-10 rounded-lg" />
-             <img loading='lazy' src={play} alt="Google Play" className="h-10 rounded-lg" />
+            <img loading='lazy' src={appstore} alt="App Store" className="h-10 cursor-pointer rounded-lg" />
+             <img loading='lazy' src={play} alt="Google Play" className="h-10 cursor-pointer rounded-lg" />
             </div>
           </div>
         </div>
@@ -236,16 +236,16 @@ function App() {
           <div className="relative z-10 w-full h-full px-6 py-16 md:py-24 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto space-y-10 md:space-y-0">
             <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-bold">Download Our App</h2>
-              <div className="w-20 md:w-28 border-t-4 border-white mx-auto md:mx-0 mb-2" />
+              <div className="w-20 md:w-28 h-0.5 rounded-3xl bg-white mx-auto md:mx-0 mb-2" />
 
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg leading-relaxed mt-5">
                 Are you driving today and have a free seat to offer in your car or you’re traveling
                 and need a lift to your destination? Let’s GetRider.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mt-4">
-                <img loading="lazy" src={play} alt="Google Play" className="h-10 rounded-lg" />
-                <img loading="lazy" src={appstore} alt="App Store" className="h-10 rounded-lg" />
+                <img loading="lazy" src={play} alt="Google Play" className="h-10  cursor-pointer rounded-lg" />
+                <img loading="lazy" src={appstore} alt="App Store" className="h-10 cursor-pointer rounded-lg" />
               <img loading="lazy" src={qr} alt="QR Code" className="w-20 rounded-2xl" />
               </div>
             </div>
