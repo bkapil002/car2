@@ -1,6 +1,8 @@
 import React from 'react'; 
-import logo from '../image/logo.png'
+
 import { Phone } from 'lucide-react';
+
+
 import search from '../image/loupe.png'
 import car from '../image/electric-car.png'
 import blog from '../image/blog.png'
@@ -8,11 +10,16 @@ import hearder from '../image/header.jpg'
 import qr from '../image/qr.png'
 import play from '../image/paystore.png'
 import appstore from '../image/app-store.png'
+import logo from '../image/logo.png'
+
+import logo1 from '../image/logo1.png'
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import BestDriversSlider from './components/BestDriversSlider';
 
 import { ImLocation } from "react-icons/im";
+import { HiMenu } from 'react-icons/hi';
 import { GiTakeMyMoney,GiSteeringWheel } from "react-icons/gi";
 import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { AiFillFacebook } from "react-icons/ai";
@@ -22,6 +29,8 @@ import CustomerReviews from './components/CustomerReviews';
 import loction from '../image/app-location.jpg'
 
 function App() {
+
+  const [menuOpen, setMenuOpen] = React.useState(false);
   const drivers = [
     {
       name: "Mason Brooks",
@@ -64,33 +73,63 @@ function App() {
     },
   ];
 
+
+   
   return (
     <div className="  min-h-screen bg-white">
 
 
-      <header className="flex text-black justify-between items-center p-4  bg-white">
-        <div className="text-2xl  font-bold"><img loading='lazy' src={logo} className='w-35 -mb-11'/><p className='ml-3 text-blue-950'>CARPOOL</p></div>
-        <nav className=" md:flex items-center space-x-8">
-          <a href="#" className="text-blue-950 hover:text-gray-900 font-medium transition-colors duration-200 flex items-center space-x-1">
-            <img loading='lazy' className='w-6' src={search}/>
-            <span >Find a Ride</span>
+     <header className="bg-white p-4 text-black">
+      <div className="flex justify-between items-center">
+        <img loading="lazy" src={logo1} className="w-32 md:w-36" />
+
+        <div className="md:hidden">
+         <button onClick={() => setMenuOpen(!menuOpen)} className="focus:outline-none">
+            <HiMenu className="w-6 h-6 text-black" />
+          </button>
+        </div>
+
+        <div className="hidden md:flex items-center space-x-8">
+          <a href="#" className="text-blue-950 hover:text-gray-900 font-medium flex items-center space-x-1">
+            <img loading="lazy" className="w-6" src={search} />
+            <span>Find a Ride</span>
           </a>
-          <a href="#" className="text-blue-950 hover:text-gray-900 font-medium transition-colors duration-200 flex items-center space-x-1">
-            <img loading='lazy' className='w-6' src={car}/>
+          <a href="#" className="text-blue-950 hover:text-gray-900 font-medium flex items-center space-x-1">
+            <img loading="lazy" className="w-6" src={car} />
             <span>Offer a Ride</span>
           </a>
-          <a href="#" className="text-blue-950 hover:text-gray-900 font-medium transition-colors duration-200 flex items-center space-x-1">
-            <img loading='lazy' className='w-6' src={blog}/>
+          <a href="#" className="text-blue-950 hover:text-gray-900 font-medium flex items-center space-x-1">
+            <img loading="lazy" className="w-6" src={blog} />
             <span>Blogs</span>
           </a>
-        </nav>
-        <div className=" md:flex items-center">
-          <div className="bg-red-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-red-600 transition-colors duration-200 shadow-sm">
-            <Phone className="w-4 h-4" />
+          <div className="bg-red-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-red-600 transition duration-200">
+           <Phone className="w-4 h-4" />
             <span className="font-semibold">+916258893548</span>
           </div>
         </div>
-      </header>
+      </div>
+
+      {menuOpen && (
+        <div className="md:hidden mt-4 space-y-4">
+          <a href="#" className=" text-blue-950 hover:text-gray-900 font-medium flex items-center space-x-2">
+          <img loading="lazy" className="w-6" src={search} />
+           <span>Find a Ride</span>
+          </a>
+          <a href="#" className=" text-blue-950 hover:text-gray-900 font-medium flex items-center space-x-2">
+            <img loading="lazy" className="w-6" src={car} />
+            <span>Offer a Ride</span>
+          </a>
+          <a href="#" className=" text-blue-950 hover:text-gray-900 font-medium flex items-center space-x-2">
+            <img loading="lazy" className="w-6" src={blog} />
+            <span>Blogs</span>
+          </a>
+          <div className="bg-red-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-red-600 transition duration-200">
+          <Phone className="w-4 h-4" />
+            <span className="font-semibold">+916258893548</span>
+          </div>
+        </div>
+      )}
+    </header>
 
 
 
@@ -100,7 +139,7 @@ function App() {
         style={{
           backgroundImage: `url(${hearder})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+       backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
       >
@@ -110,15 +149,15 @@ function App() {
             SEAMLESS RIDES, SHARED DREAMS
           </h1>
           <p className="mt-4 text-lg italic md:text-xl">
-            Download Carpool App Today!
+          Download Carpool App Today!
           </p>
           <div className="flex justify-center space-x-4 mt-6">
             <div className="ml-4">
-              <img loading='lazy' src={qr} alt="QR Code" className="h-20 rounded-sm" />
+         <img loading='lazy' src={qr} alt="QR Code" className="h-20 rounded-sm" />
             </div>
             <div className="space-y-2">
-              <img loading='lazy' src={appstore} alt="App Store" className="h-10" />
-              <img loading='lazy' src={play} alt="Google Play" className="h-10" />
+            <img loading='lazy' src={appstore} alt="App Store" className="h-10" />
+             <img loading='lazy' src={play} alt="Google Play" className="h-10" />
             </div>
           </div>
         </div>
@@ -133,12 +172,12 @@ function App() {
       <section className="text-center mt-10 text-blue-950 p-4 mb-24">
         <h1 className="text-4xl font-bold mb-10">Where do you want a ride today?</h1>
         <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4 space-y-4 md:space-y-0">
-          <div className="flex justify-between items-center bg-red-600 rounded-lg p-3 w-full md:w-64 max-w-sm">
+         <div className="flex justify-between items-center bg-red-600 rounded-lg p-3 w-full md:w-64 max-w-sm">
             <p className="text-white">Belarus to Russia</p>
             <div className="bg-white text-red-600 px-3 py-1 rounded">$10</div>
           </div>
           <div className="flex justify-between items-center bg-red-600 rounded-lg p-3 w-full md:w-64 max-w-sm">
-            <p className="text-white">Poland to Germany</p>
+          <p className="text-white">Poland to Germany</p>
             <div className="bg-white text-red-600 px-3 py-1 rounded">$20</div>
           </div>
           <div className="flex justify-between items-center bg-red-600 rounded-lg p-3 w-full md:w-64 max-w-sm">
@@ -169,15 +208,15 @@ function App() {
 
           <div className="flex flex-col items-center text-center">
             <ImLocation className="text-red-500 text-5xl mb-4"/>
-            <h3 className="text-3xl font-semibold italic mb-2">Select &amp; Book</h3>
+           <h3 className="text-3xl font-semibold italic mb-2">Select &amp; Book</h3>
             <p className="text-1xl text-gray-300 text-left pl-20 medium self-start max-w-[300px]">
               Select a ride. Book your seat. You're good to go.
             </p>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <GiSteeringWheel className="text-red-500 text-5xl mb-4"/>
-            <h3 className="text-3xl font-semibold italic  mb-2">Travel Together</h3>
+          <GiSteeringWheel className="text-red-500 text-5xl mb-4"/>
+          <h3 className="text-3xl font-semibold italic  mb-2">Travel Together</h3>
             <p className="text-1xl text-gray-300 text-left pl-20 medium self-start max-w-[300px]">
               Share your journey, save more, and make every ride more meaningful.
             </p>
@@ -212,7 +251,7 @@ function App() {
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mt-4">
                 <img loading="lazy" src={play} alt="Google Play" className="h-10" />
                 <img loading="lazy" src={appstore} alt="App Store" className="h-10" />
-                <img loading="lazy" src={qr} alt="QR Code" className="w-20 rounded-2xl" />
+              <img loading="lazy" src={qr} alt="QR Code" className="w-20 rounded-2xl" />
               </div>
             </div>
           </div>
@@ -222,7 +261,7 @@ function App() {
 
 
         <footer className="bg-white text-center text-[#0a2b4a] py-10 px-6">
-          <div className="text-2xl relative  font-bold"><img loading='lazy' src={logo} className='w-35 -mb-11 text-center absolute top-0 left-1/2 -translate-x-1/2'/><p className=' pt-5 text-blue-950'>CARPOOL</p></div>
+      <div className="text-2xl relative  font-bold"><img loading='lazy' src={logo} className='w-35 -mb-11 text-center absolute top-0 left-1/2 -translate-x-1/2'/><p className=' pt-5 text-blue-950'>CARPOOL</p></div>
           <p className=" text-2xl max-w-2xl mx-auto mt-5">
             Redefining the way we travel—connect with trusted riders, save money, and reduce your carbon footprint.
           </p>
