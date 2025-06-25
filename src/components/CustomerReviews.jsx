@@ -42,7 +42,7 @@ export default function CustomerReviews() {
       </h2>
       <div className="border-b-4 border-[#0a2b4a] rounded-4xl w-32 mx-auto mb-10 relative">
       </div>
-      <div className="mx-auto w-full max-w-5xl h-80">
+      <div className="mx-auto shadow-xl/30 w-full max-w-5xl h-80">
         <div className="bg-white shadow-lg rounded-lg flex overflow-hidden h-full">
           <div className="w-1/3 h-full">
             <img   loading='lazy'

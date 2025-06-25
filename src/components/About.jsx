@@ -54,12 +54,12 @@ const About = () => {
           <img   loading='lazy'
             src={car2} 
             alt="Car Front"
-            className="w-50 h-90 object-cover   rounded-[20px]"
+            className="w-50 h-90 object-cover shadow-xl/30 rounded-[20px]"
           />
           <img   loading='lazy'
             src={car1}
             alt="Car Back"
-            className="w-50 h-90 object-cover  rounded-[20px]"
+            className="w-50 h-90 object-cover shadow-xl/30 rounded-[20px]"
           />
         </div>
       </div>
