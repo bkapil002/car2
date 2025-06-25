@@ -65,7 +65,9 @@ function App() {
   ];
 
   return (
-    <div className=" text-white min-h-screen bg-white">
+    <div className="  min-h-screen bg-white">
+
+
       <header className="flex text-black justify-between items-center p-4  bg-white">
         <div className="text-2xl  font-bold"><img loading='lazy' src={logo} className='w-35 -mb-11'/><p className='ml-3 text-blue-950'>CARPOOL</p></div>
         <nav className=" md:flex items-center space-x-8">
@@ -233,7 +235,7 @@ function App() {
         </footer>
 
 
-        
+
 
         <footer className='  flex justify-center  w-full  bg-red-600 p-2 '>
           <p className="text-sm  text-white font-normal">

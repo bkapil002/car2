@@ -4,11 +4,11 @@ import car1 from "../../image/drive (3).jpg"
 const About = () => {
   return (
     <section className="bg-[#0a2b4a] text-white py-12 px-6 md:px-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">About Carpool</h2>
+      <h2 className="text-3xl md:text-4xl font-bold ml-3 mb-2">About Carpool</h2>
       <div className="border-b-4 ml-12 border-white rounded-2xl w-40 mb-10 relative">
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10 items-center">
+      <div className="grid md:grid-cols-2 gap-10 -mt-5 items-center">
         
         <div className="space-y-8">
         
