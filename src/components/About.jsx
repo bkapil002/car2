@@ -49,7 +49,7 @@ const About = () => {
         </div>
 
         
-         <div className="flex gap-2 justify-center w-full">
+         <div className="hidden md:flex gap-4 justify-center w-full">
           <img   loading='lazy'
             src={car1} 
             alt="Car Front"

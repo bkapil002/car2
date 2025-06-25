@@ -133,25 +133,24 @@ function App() {
   </div>
 </section>
 
-       <section className="text-center mt-10 text-blue-950 p-4 mb-25">
+       <section className="text-center mt-10 text-blue-950 p-4 mb-24">
   <h1 className="text-4xl font-bold mb-10">Where do you want a ride today?</h1>
 
-  <div className="flex flex-row  justify-center space-x-4">
-    <div className="flex justify-between items-center bg-red-600 rounded-lg p-3 w-64">
+  <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4 space-y-4 md:space-y-0">
+    <div className="flex justify-between items-center bg-red-600 rounded-lg p-3 w-full md:w-64 max-w-sm">
       <p className="text-white">Belarus to Russia</p>
       <div className="bg-white text-red-600 px-3 py-1 rounded">$10</div>
     </div>
-    <div className="flex justify-between items-center bg-red-600 rounded-lg p-3 w-64">
+    <div className="flex justify-between items-center bg-red-600 rounded-lg p-3 w-full md:w-64 max-w-sm">
       <p className="text-white">Poland to Germany</p>
       <div className="bg-white text-red-600 px-3 py-1 rounded">$20</div>
     </div>
-    <div className="flex justify-between items-center bg-red-600 rounded-lg p-3 w-64">
+    <div className="flex justify-between items-center bg-red-600 rounded-lg p-3 w-full md:w-64 max-w-sm">
       <p className="text-white">France to Spain</p>
       <div className="bg-white text-red-600 px-3 py-1 rounded">$30</div>
     </div>
   </div>
 </section>
-
      
 
 
@@ -171,7 +170,7 @@ function App() {
       </p>
     </div>
 
-    {/* Step 2 */}
+    
     <div className="flex flex-col items-center text-center">
       <ImLocation className="text-red-500 text-5xl mb-4"/>
       <h3 className="text-3xl font-semibold italic mb-2">Select &amp; Book</h3>
@@ -180,14 +179,14 @@ function App() {
       </p>
     </div>
 
-    {/* Step 3 */}
+   
     <div className="flex flex-col items-center text-center">
   <GiSteeringWheel className="text-red-500 text-5xl mb-4"/>
   <h3 className="text-3xl font-semibold italic  mb-2">Travel Together</h3>
   <p className="text-1xl text-gray-300 text-left pl-20 medium self-start max-w-[300px]">
     Share your journey, save more, and make every ride more meaningful.
   </p>
-</div>
+   </div>
 
   </div>
 </div>
@@ -206,21 +205,26 @@ function App() {
   className="relative bg-cover bg-center text-white"
   style={{ backgroundImage: `url(${loction})` }}
 >
+ 
   <div className="absolute inset-0 bg-gradient-to-r from-[#0a2b4a]/100 to-transparent z-0" />
 
- 
-  <div className="relative z-10 w-full h-full px-6 py-16 md:py-24 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto">
-    <div className="md:w-1/2 space-y-6">
+  
+  <div className="relative z-10 w-full h-full px-6 py-16 md:py-24 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto space-y-10 md:space-y-0">
+    
+    
+    <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
       <h2 className="text-3xl md:text-4xl font-bold">Download Our App</h2>
-      <div className="w-28 border-t-4 border-white mb-2" />
+      <div className="w-20 md:w-28 border-t-4 border-white mx-auto md:mx-0 mb-2" />
       <p className="text-lg leading-relaxed">
-        Are you driving today and have a free seat to offer in your car or you traveling
-        and need a lift to destination, Let’s GetRider.F
+        Are you driving today and have a free seat to offer in your car or you’re traveling
+        and need a lift to your destination? Let’s GetRider.F
       </p>
-      <div className="flex gap-4 mt-4">
-        <img   loading='lazy'   src={play} alt="Google Play" className="h-10 mt-5" />
-        <img   loading='lazy' src={appstore} alt="App Store" className="h-10 mt-5" />
-        <img   loading='lazy' src={qr} alt="QR Code" className="w-20 rounded-2xl" />
+
+      
+      <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mt-4">
+        <img loading="lazy" src={play} alt="Google Play" className="h-10" />
+        <img loading="lazy" src={appstore} alt="App Store" className="h-10" />
+        <img loading="lazy" src={qr} alt="QR Code" className="w-20 rounded-2xl" />
       </div>
     </div>
   </div>

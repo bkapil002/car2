@@ -74,6 +74,8 @@ const NextArrow = ({ onClick }) => (
 
 // Component
 const BestDriversSlider = () => {
+
+  
   const settings = {
     dots: true,
     infinite: true,
