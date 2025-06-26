@@ -1,77 +1,26 @@
-import React from 'react'; 
+import NaveBar from './components/NaveBar';
 
-import { Phone } from 'lucide-react';
-
-
-import search from '../image/loupe.png'
-import car from '../image/electric-car.png'
-import blog from '../image/blog.png'
 import hearder from '../image/header.jpg'
 import qr from '../image/qr.png'
 import play from '../image/play-removebg-preview.png'
 import appstore from '../image/apple-removebg-preview.png'
+import loction from '../image/app-location.jpg'
 import logo from '../image/logo.png'
 
-import logo1 from '../image/logo1.png'
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import About from './components/About';
+import CustomerReviews from './components/CustomerReviews';
 import BestDriversSlider from './components/BestDriversSlider';
 
 import { ImLocation } from "react-icons/im";
-import { HiMenu } from 'react-icons/hi';
 import { GiTakeMyMoney,GiSteeringWheel } from "react-icons/gi";
 import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { AiFillFacebook } from "react-icons/ai";
-import About from './components/About';
-import CustomerReviews from './components/CustomerReviews';
 
-import loction from '../image/app-location.jpg'
+
+
+
 
 function App() {
-
-  const [menuOpen, setMenuOpen] = React.useState(false);
-  const drivers = [
-    {
-      name: "Mason Brooks",
-      image: "https://i.imgur.com/fuOktkM.jpg", 
-      car: "https://i.imgur.com/Ae8YfLP.png",  
-      time: "Wed, 8 January at 2:00 PM",
-      passengers: 1,
-      price: "$19.50",
-      features: [
-        "Max 2 passengers in back seats",
-        "Pets are not allowed in the Car",
-        "Smoking is not allowed",
-      ],
-    },
-    {
-      name: "Jackson Hayes",
-      image: "https://i.imgur.com/kxqYzFy.jpg",
-      car: "https://i.imgur.com/2PAVURR.jpg",
-      time: "Wed, 8 January at 2:00 PM",
-      passengers: 1,
-      price: "$19.50",
-      features: [
-        "Max 2 passengers in back seats",
-        "Pets are not allowed in the Car",
-        "Smoking is not allowed",
-      ],
-    },
-    {
-      name: "Wyatt Morgan",
-      image: "https://i.imgur.com/WyWYXUN.jpg",
-      car: "https://i.imgur.com/syBkGHt.jpg",
-      time: "Wed, 8 January at 2:00 PM",
-      passengers: 1,
-      price: "$19.50",
-      features: [
-        "Max 2 passengers in back seats",
-        "Pets are not allowed in the Car",
-        "Smoking is not allowed",
-      ],
-    },
-  ];
 
 
    
@@ -79,60 +28,7 @@ function App() {
     <div className="  min-h-screen bg-white">
 
 
-     <header className="bg-white p-4 text-black">
-      <div className="flex justify-between items-center">
-        <img loading="lazy" src={logo1} className="w-32 md:w-36" />
-
-        <div className="md:hidden">
-         <button onClick={() => setMenuOpen(!menuOpen)} className="focus:outline-none">
-            <HiMenu className="w-6 h-6 text-black" />
-          </button>
-        </div>
-
-        <div className="hidden md:flex items-center space-x-8">
-          <a href="#" className="text-blue-950 hover:text-gray-900 font-medium flex items-center space-x-1">
-            <img loading="lazy" className="w-6" src={search} />
-            <span>Find a Ride</span>
-          </a>
-          <a href="#" className="text-blue-950 hover:text-gray-900 font-medium flex items-center space-x-1">
-            <img loading="lazy" className="w-6" src={car} />
-            <span>Offer a Ride</span>
-          </a>
-          <a href="#" className="text-blue-950 hover:text-gray-900 font-medium flex items-center space-x-1">
-            <img loading="lazy" className="w-6" src={blog} />
-            <span>Blogs</span>
-          </a>
-          <div className="bg-red-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-red-600 transition duration-200">
-           <Phone className="w-4 h-4" />
-            <span className="font-semibold">+916258893548</span>
-          </div>
-        </div>
-      </div>
-
-      {menuOpen && (
-        <div className="md:hidden mt-4 space-y-4">
-          <a href="#" className=" text-blue-950 hover:text-gray-900 font-medium flex items-center space-x-2">
-          <img loading="lazy" className="w-6" src={search} />
-           <span>Find a Ride</span>
-          </a>
-          <a href="#" className=" text-blue-950 hover:text-gray-900 font-medium flex items-center space-x-2">
-            <img loading="lazy" className="w-6" src={car} />
-            <span>Offer a Ride</span>
-          </a>
-          <a href="#" className=" text-blue-950 hover:text-gray-900 font-medium flex items-center space-x-2">
-            <img loading="lazy" className="w-6" src={blog} />
-            <span>Blogs</span>
-          </a>
-          <div className="bg-red-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-red-600 transition duration-200">
-          <Phone className="w-4 h-4" />
-            <span className="font-semibold">+916258893548</span>
-          </div>
-        </div>
-      )}
-    </header>
-
-
-
+     <NaveBar/>
 
       <section
         className="text-center relative py-30"
